@@ -1,5 +1,9 @@
 :root {
   --color: rgb(68, 68, 68);
+  --hr-text: "OR"; /* Default text */
+  --hr-color: #e0e0e0;
+  --hr-background: #f8f9fa;
+  --hr-text-color: var(--color);
 }
 body {
   background: rgb(151, 255, 166);
@@ -25,6 +29,28 @@ body {
 .background svg {
   animation: fade-down 3s ease-in-out;
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.01));
+}
+
+.hr-with-text {
+  position: relative;
+  height: 1px;
+  background-color: var(--hr-color);
+  margin: 40px 0;
+  text-align: center;
+}
+
+.hr-with-text::after {
+  content: var(--hr-text);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--hr-background);
+  color: var(--hr-text-color);
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 @keyframes fade-down {
@@ -126,13 +152,6 @@ h6 {
   text-indent: 1em;
 }
 
-.container input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-
 .container button {
   width: 100%;
   background-color: #4caf50;
@@ -206,7 +225,6 @@ h6 {
   box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.2);
   width: 40%;
   margin: 20px;
-  text-align: center;
   font-family: monospace;
   padding: 1.5rem;
   max-width: 430px;
@@ -225,9 +243,10 @@ h6 {
   border-radius: 2rem;
   margin-bottom: 1rem;
 }
-.card h3 {
+.card h1 {
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
@@ -416,14 +435,39 @@ h6 {
   margin-bottom: 5px;
 }
 .form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-group input::-webkit-inner-spin-button,
+.form-group input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
 .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 .form-group textarea {
   height: 150px;
+}
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
 }
 button {
   display: block;
@@ -437,4 +481,15 @@ button {
 }
 button:hover {
   background-color: #333333;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  text-align: start;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }

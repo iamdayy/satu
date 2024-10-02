@@ -24,27 +24,164 @@
     </div>
     <div class="container" style="max-width: 40%; margin-left: auto; margin-right: auto;">
         <h1>Register</h1>
-        <form id="register-form">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <button type="submit">Register</button>
-        </form>
-        <div class="login-link">
-            Already have an account? <a href="#">Login here</a>
+        <div class="card" style="margin-left: auto; margin-right: auto; width: 100%;">
+            <form id="register-form">
+                <div class="hr-with-text" style="--hr-text: 'Data Pribadi';"></div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nama_depan">Nama Depan</label>
+                        <input type="text" id="nama_depan" name="nama_depan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_belakang">Nama Belakang</label>
+                        <input type="text" id="nama_belakang" name="nama_belakang" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="no_hp">No HP</label>
+                        <input type="tel" id="no_hp" name="no_hp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group" style="grid-column: span 2;">
+                        <label for="alamat">Alamat</label>
+                        <textarea type="text" id="alamat" name="alamat" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="pekerjaan">Pekerjaan</label>
+                        <select id="pekerjaan" name="pekerjaan" required>
+                            <option value="">Pilih Pekerjaan</option>
+                            <option value="swasta">Swasta</option>
+                            <option value="pns">PNS</option>
+                            <option value="tni">TNI</option>
+                            <option value="polri">Polri</option>
+                            <option value="dokter">Dokter</option>
+                            <option value="programmer">Programmer</option>
+                            <option value="guru">Guru</option>
+                            <option value="dosen">Dosen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agama">Agama</label>
+                        <select id="agama" name="agama" required>
+                            <option value="">Pilih Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="katolik">Katolik</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="jenisKelamin">Jenis Kelamin</label>
+                        <select id="jenisKelamin" name="jenisKelamin" required>
+                            <option value="">Pilih jenis Kelamin</option>
+                            <option value="lk">Laki Laki</option>
+                            <option value="pr">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nik">NIK / No KTP</label>
+                        <input type="number" id="nik" name="nik" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facebook">URL Facebook</label>
+                        <input type="url" id="facebook" name="facebook">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagram">URL Instagram</label>
+                        <input type="url" id="instagram" name="instagram">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">URL Website</label>
+                        <input type="url" id="website" name="website">
+                    </div>
+                    <div class="form-group">
+                        <label for="github">URL Github</label>
+                        <input type="url" id="github" name="github">
+                    </div>
+                </div>
+                <div class="hr-with-text" style="--hr-text: 'Data Orang Tua';"></div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nAyah">Nama Ayah</label>
+                        <input type="text" id="nAyah" name="nAyah" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nIbu">Nama Ibu</label>
+                        <input type="text" id="nIbu" name="nIbu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nikAyah">NIK Ayah</label>
+                        <input type="number" id="nikAyah" name="nikAyah" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nikIbu">NIK Ibu</label>
+                        <input type="number" id="nikIbu" name="nikIbu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aAyah">Alamat Ayah</label>
+                        <textarea type="text" id="aAyah" name="aAyah"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="aIbu">Alamat Ibu</label>
+                        <textarea type="text" id="aIbu" name="aIbu"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="pekerjaanAyah">Pekerjaan Ayah</label>
+                        <select id="pekerjaanAyah" name="pekerjaanAyah" required>
+                            <option value="">Pilih Pekerjaan</option>
+                            <option value="swasta">Swasta</option>
+                            <option value="pns">PNS</option>
+                            <option value="tni">TNI</option>
+                            <option value="polri">Polri</option>
+                            <option value="dokter">Dokter</option>
+                            <option value="programmer">Programmer</option>
+                            <option value="guru">Guru</option>
+                            <option value="dosen">Dosen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pekerjaanIbu">Pekerjaan Ibu</label>
+                        <select id="pekerjaanIbu" name="pekerjaanIbu" required>
+                            <option value="">Pilih Pekerjaan</option>
+                            <option value="swasta">Swasta</option>
+                            <option value="pns">PNS</option>
+                            <option value="tni">TNI</option>
+                            <option value="polri">Polri</option>
+                            <option value="dokter">Dokter</option>
+                            <option value="programmer">Programmer</option>
+                            <option value="guru">Guru</option>
+                            <option value="dosen">Dosen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="noAyah">No. Hp Ayah</label>
+                        <input type="tel" id="noAyah" name="noAyah" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="noIbu">No. Hp Ibu</label>
+                        <input type="tel" id="noIbu" name="noIbu" required>
+                    </div>
+                </div>
+                <div class="hr-with-text" style="--hr-text: 'Data Login';"></div>
+                <div class="form-grid">
+                    <div class="form-group" style="grid-column: span 2;">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="rePassword">Re-password</label>
+                        <input type="password" id="rePassword" name="rePassword">
+                    </div>
+                </div>
+                <button type="submit" class="button" style="margin-left: auto; margin-right: auto;">Submit</button>
+            </form>
         </div>
     </div>
 

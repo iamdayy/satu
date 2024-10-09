@@ -121,7 +121,7 @@ body {
   color: var(--color);
 }
 
-.navbar a:hover {
+.navbar li a:hover {
   color: var(--color);
   background-color: rgba(112, 112, 112, 0.2);
 }
@@ -152,7 +152,7 @@ h6 {
   text-indent: 1em;
 }
 
-.container button {
+.button {
   width: 100%;
   background-color: #4caf50;
   color: white;
@@ -163,11 +163,11 @@ h6 {
   cursor: pointer;
 }
 
-.container button:hover {
+.button:hover {
   background-color: #45a049;
 }
 
-.container button:disabled {
+.button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
@@ -223,11 +223,9 @@ h6 {
 
 .card {
   box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.2);
-  width: 40%;
   margin: 20px;
   font-family: monospace;
   padding: 1.5rem;
-  max-width: 430px;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
   background-color: #f8f9fa;
@@ -273,29 +271,6 @@ h6 {
 
 .card a:visited {
   color: #0056b3;
-}
-
-.button {
-  background-color: #98caff;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: 700;
-}
-
-.button:hover {
-  background-color: #4ba2ff;
-}
-
-.button:active {
-  background-color: #0080ff;
 }
 
 .gallery {
@@ -468,19 +443,6 @@ h6 {
   background-repeat: no-repeat;
   background-position-x: 98%;
   background-position-y: 50%;
-}
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #e8491d;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #333333;
 }
 .form-grid {
   display: grid;

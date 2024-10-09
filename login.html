@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Iamdayy</title>
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1024">
+            <defs>
+                <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="white" />
+                    <stop offset="90%" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad3)"
+                d="m-84.5-31.5c239-5,243.5,662,724.5,662,456,0,495.5-664,725.5-663,362.5,1.58-712.94-209.56-1450,1Z" />
+        </svg>
+    </div>
+    <div class="container" style="max-width: 40%; margin-left: auto; margin-right: auto;">
+        <h1>Login</h1>
+        <form id="login-form" class="card">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="login-link">
+            don't have an account? <a href="./register.html">Register here</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

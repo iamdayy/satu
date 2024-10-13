@@ -2,7 +2,7 @@
   --color: rgb(68, 68, 68);
   --hr-text: "OR"; /* Default text */
   --hr-color: #e0e0e0;
-  --hr-background: #f8f9fa;
+  --hr-background: #fff;
   --hr-text-color: var(--color);
 }
 body {
@@ -25,6 +25,7 @@ body {
   width: 100%;
   height: 100%;
   top: -10px;
+  overflow: hidden;
 }
 .background svg {
   animation: fade-down 3s ease-in-out;
@@ -83,47 +84,6 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-}
-
-.container {
-  margin: 20px;
-  padding: 20px;
-}
-
-.navbar a {
-  color: var(--color);
-  text-decoration: none;
-  font-family: monospace;
-  margin: 0 10px;
-  text-transform: capitalize;
-  font-size: large;
-  font-weight: 600;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-
-.navbar-item {
-  display: inline-block;
-}
-
-.navbar-item ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  flex: auto;
-}
-
-.navbar-item li {
-  display: inline-block;
-}
-
-.navbar-item:hover {
-  color: var(--color);
-}
-
-.navbar li a:hover {
-  color: var(--color);
-  background-color: rgba(112, 112, 112, 0.2);
 }
 
 .container h1,
@@ -276,6 +236,7 @@ h6 {
 .gallery {
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 8rem;
 }
 
 .gallery h1 {
@@ -454,4 +415,104 @@ h6 {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+/* Add media queries for responsiveness */
+
+/* Mobile devices (max-width: 720px) */
+@media screen and (max-width: 720px) {
+  .container {
+    padding: 10px;
+  }
+  .jumbotron {
+    width: 90%;
+    padding: 10px;
+  }
+  .card {
+    margin: 10px;
+    padding: 10px;
+  }
+  .gallery_wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 100vw;
+  }
+  .profile-picture {
+    max-width: 200px;
+    /* top: -10%; */
+  }
+  .profile-info {
+    padding: 2rem;
+    padding-top: 5rem;
+    margin-top: 10rem;
+  }
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+  .profile-info p {
+    font-size: medium;
+  }
+  .profile-info ul {
+    width: 80%;
+  }
+  .profile-info li {
+    font-size: 1.2rem;
+  }
+  .contact-form {
+    padding: 10px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+  .jumbotron {
+    width: 60%;
+    padding: 20px;
+  }
+  .card {
+    margin: 20px;
+    padding: 20px;
+  }
+  .gallery_wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .profile-picture {
+    max-width: 300px;
+  }
+  .profile-info {
+    padding: 5rem;
+    padding-top: 10rem;
+    margin-top: 10rem;
+  }
+  .profile-info h2 {
+    font-size: 2.5rem;
+  }
+  .profile-info p {
+    font-size: x-large;
+  }
+  .profile-info ul {
+    width: 60%;
+  }
+  .profile-info li {
+    font-size: 1.8rem;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

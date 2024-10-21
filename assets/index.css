@@ -18,6 +18,9 @@ body {
   /* height: fit-content; */
   /* min-height: 100vh; */
 }
+.navbar {
+  transition: 500ms ease-in-out;
+}
 .parallax {
   position: relative;
   background-position: center;
